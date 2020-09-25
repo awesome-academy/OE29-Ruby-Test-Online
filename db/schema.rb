@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_081537) do
+ActiveRecord::Schema.define(version: 2020_09_25_070828) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_081537) do
 
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "time_end"
-    t.integer "type", default: 0, null: false
+    t.integer "language", default: 0, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_081537) do
 
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "type", default: 0, null: false
+    t.integer "language", default: 0, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -81,13 +81,14 @@ ActiveRecord::Schema.define(version: 2020_09_24_081537) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "gender"
+    t.integer "gender", default: 0, null: false
     t.datetime "birthday"
     t.integer "role", default: 0, null: false
-    t.integer "type", default: 0, null: false
+    t.integer "language", default: 0, null: false
     t.integer "status", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "answers", "questions"
