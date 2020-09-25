@@ -1,4 +1,16 @@
 vi:
-  views:
-    layouts:
-      title: "OE29RubyHotelManagement"
+  title: "Test_Online"
+  layouts:
+    appllication:
+      title: "Test_Online"
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+  static_pages:
+    home:
+      title: "Trang chủ"
+    help:
+      title: "Trơ giúp"
+    about:
+      title: "Thông tin"
+    contact:
+      title: "Liên hê"
