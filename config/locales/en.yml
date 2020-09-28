@@ -14,3 +14,20 @@ en:
       title: "About"
     contact:
       title: "Contact"
+  users:
+    new:
+      title: "Sign Up"
+      submit: "Create my account"
+      name: Name
+      password: Password
+      confirmation: Password confirmation
+  shared:
+    error_messages:
+      text: "The form contains"
+      error: "error"
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Confirmation"

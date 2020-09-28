@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  USER_PERMIT = %i(name email password password_confirmation).freeze
   has_many :posts, dependent: :destroy
   has_many :questions, dependent: :destroy
   has_many :topics, dependent: :destroy

@@ -1,7 +1,7 @@
 vi:
   title: "Test_Online"
   layouts:
-    appllication:
+    application:
       title: "Test_Online"
       en: "Tiếng Anh"
       vi: "Tiếng Việt"
@@ -14,3 +14,25 @@ vi:
       title: "Thông tin"
     contact:
       title: "Liên hê"
+  users:
+    show:
+      not_found_user: "Không tìm thấy người dùng"
+    create:
+      text_success: "Chào mừng đến với Websize!"
+      text_error: "Đăng ký lỗi!"
+    new:
+      title: "Đăng ký"
+      submit: "Tạo tài khoản của tôi"
+      name: "Tên"
+      password: "Mật khẩu"
+      confirmation: "Xác thực mật khẩu"
+  shared:
+    error_messages:
+      text: "Biểu mẫu chứa"
+      error: "lỗi"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
