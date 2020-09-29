@@ -1,4 +1,9 @@
 vi:
+  global:
+    not_found_user: "Không tìm thấy người dùng"
+    text_success: "Chào mừng đến với Websize!"
+    text_error: "Đăng ký lỗi!"
+    invalid: "Email/mật khẩu không hợp lệ"
   title: "Test_Online"
   layouts:
     application:
@@ -15,11 +20,6 @@ vi:
     contact:
       title: "Liên hê"
   users:
-    show:
-      not_found_user: "Không tìm thấy người dùng"
-    create:
-      text_success: "Chào mừng đến với Websize!"
-      text_error: "Đăng ký lỗi!"
     new:
       title: "Đăng ký"
       submit: "Tạo tài khoản của tôi"
