@@ -1,4 +1,9 @@
 en:
+  global:
+    not_found_user: "Not found user"
+    text_success: "Welcome to the Websize!"
+    text_error: "Signup unsuccessful!"
+    invalid: "Invalid email/password combination"
   title: "Test_Online"
   layouts:
     application:
