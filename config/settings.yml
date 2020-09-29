@@ -3,3 +3,5 @@ user:
     name_max: 50
     email_max: 255
     pass_min: 6
+users_helper:
+  size: 80
