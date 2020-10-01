@@ -1,9 +1,24 @@
 en:
   global:
+    acc_activated: "Account activated!"
+    invalidate_activation_link: "Invalid activation link"
+    email_send_with_pw_reset: "Email sent with password reset instructions"
+    email_not_found: "Email address not found"
+    pass_empty: "can't be empty"
+    pass_reset: "Password has been reset."
+    reset_pass_faild: "Password reset failed."
     not_found_user: "Not found user"
-    text_success: "Welcome to the Websize!"
-    text_error: "Signup unsuccessful!"
+    invalid_user: "Invalid user"
+    pass_expired: "Password reset has expired."
     invalid: "Invalid email/password combination"
+    text_acc_not_activated: "Account not activated."
+    text_check_email: "Please check your email to activate your account."
+    text_error: "Signup unsuccessful!"
+    update_success: "Profile updated"
+    update_error: "Update failed"
+    user_delete: "User deleted"
+    destroy_fail: "Delete fail"
+    please_login: "Please log in "
   title: "Test_Online"
   layouts:
     application:
@@ -26,10 +41,45 @@ en:
       name: Name
       password: Password
       confirmation: Password confirmation
+  password_resets:
+    edit:
+      title: "Reset password"
+      pass: "Password"
+      confirm: "Comfirmation"
+      update_password: "Update Password"
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+      click: "Reset password"
+  sessions:
+    new:
+      title: "Log in"
+      login: "Log in"
+      new_user: "New User?"
+      sign_up: "Sign up now!"
+      password: "Password"
+      remember: "Remember me on this computer"
+      forgot_pass: "(forgot password)"
   shared:
     error_messages:
       text: "The form contains"
       error: "error"
+  user_mailer:
+    account_activation:
+      title: "Sample app"
+      hi: "Hi"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      title: "Password reset"
+      reset_your_pass: "To reset your password click the link below:"
+      time_expire: "This link will expire in two hours."
+      not_request: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      to_reset: "To reset your password click the link below:"
+  mailers:
+    user_mailer:
+      account_activation: "Account activation"
+      password_reset: "Password reset"
   activerecord:
     attributes:
       user:
