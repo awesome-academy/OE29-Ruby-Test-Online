@@ -1,0 +1,18 @@
+// Place all the styles related to the trainers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'color';
+  .nav-sidebar .nav-link p{
+    color: $siba_menu;
+    font-weight: bold;
+  }
+
+  .user-panel .info{
+    color: $name_user;
+    font-weight: bold;
+  }
+
+  .image-logo{
+    height: 100px;
+    width: 100px
+  }

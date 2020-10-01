@@ -1,0 +1,55 @@
+ <!-- Preloader Start -->
+<!--  <div id="preloader-active">
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader-inner position-relative">
+      <div class="preloader-circle"></div>
+      <div class="preloader-img pere-text">
+        <%= image_tag Settings.images.trainee.header.loder %>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Preloader Start -->
+<header>
+  <!-- Header Start -->
+  <div class="header-area">
+    <div class="main-header  header-sticky">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-xl-2 col-lg-2 col-md-1">
+            <div class="logo">
+              <%= link_to image_tag(Settings.images.trainee.header.logo), root_path %>
+            </div>
+          </div>
+          <div class="col-xl-10 col-lg-10 col-md-10">
+            <div class="menu-main d-flex align-items-center justify-content-end">
+              <!-- Main-menu -->
+              <div class="main-menu f-right d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><%= link_to t(".home"), home_path %></li>
+                    <li><%= link_to t(".about"), "#" %></li>
+                    <li><%= link_to t(".help"), "#" %></li>
+                    <li><%= link_to t(".contact"), "#" %></li>
+                    <li><%= link_to t(".account"), "#" %>
+                      <ul class="submenu">
+                        <li><%= link_to t(".profile"), "#" %></li>
+                        <li><%= link_to t(".logout"), logout_path, method: :delete %></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header End -->
+</header>

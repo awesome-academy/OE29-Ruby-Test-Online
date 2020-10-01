@@ -13,3 +13,13 @@ users:
      size_image: 50
 paging:
   size: 20
+images:
+  trainee:
+    header:
+      loder: /images/logo/loder.png
+      logo: /images/logo/logo1.png
+    home:
+      git: /images/service/github-logo.jpg
+  trainer:
+    logo: /images/trainer/logo/loder.png
+    logo1: /images/trainer/logo/logo.png

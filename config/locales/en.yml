@@ -25,9 +25,36 @@ en:
       title: "Test_Online"
       en: "English"
       vi: "Vietnamese"
+      home: "Home"
+      about: "About"
+      help: "Help"
+      contact: "Contact"
+      profile: "Profile"
+      exam: "Exam"
+      account: "Account"
+      logout: "Logout"
+
+    # trainer
+    base:
+      sidebar:
+        trainer: "Trainer"
+        question: "Question"
+        statistical: "Statistical"
+        create_q: "Create question"
+        show_q: "Show question"
+        edit_q: "Edit question"
+        delete_q: "Delete question"
+        trainee: "Trainee"
+        create_user: "Create user"
+        show_user: "Show user"
+        edit_user: "Edit user"
+        delete_user: "Delete user"
+      footer:
+        slogan: "Make Awesome things that matter"
   static_pages:
     home:
       title: "Home"
+      title1: "Github"
     help:
       title: "Help"
     about:

@@ -10,5 +10,6 @@ module OE29RubyTestOnline
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :en
+    config.assets.precompile += %w( *.js *.css *.jpg *.png)
   end
 end
