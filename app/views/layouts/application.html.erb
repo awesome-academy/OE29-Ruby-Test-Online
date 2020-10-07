@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title><%= full_title yield(:title) %></title>
+    <title><%= full_title yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
-  <body>
-    <%= link_to t(".en"), locale: :en %> |
-    <%= link_to t(".vi"), locale: :vi %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <body>
+      <% if logged_in? %>
+        <% if current_user.trainee? %>
+          <%= render "layouts/header" %>
+          <%= link_to t(".en"), locale: :en %> |
+          <%= link_to t(".vi"), locale: :vi %>
+          <div class="container">
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
+            <%= yield %>
+            <%= render "layouts/footer" %>
+            <%= debug(params) if Rails.env.development? %>
+          </div>
+        <% elsif current_user.trainer? %>
+          <%= render "layouts/trainers" %>
+        <% end %>
+      <% else %>
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <%= yield %>
       <% end %>
-      <%= yield %>
-    </div>
-  </body>
+    </body>
+
 </html>

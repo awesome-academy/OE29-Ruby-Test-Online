@@ -25,6 +25,14 @@ vi:
       title: "Test_Online"
       en: "Tiếng Anh"
       vi: "Tiếng Việt"
+      home: "Home"
+      about: "Giới thiệu"
+      help: "Help"
+      contact: "Liên hệ"
+      profile: "Thông tin cá nhân"
+      exam: "Bài test"
+      account: "Tài khoản"
+      logout: "Đăng Xuất"
   static_pages:
     home:
       title: "Trang chủ"
