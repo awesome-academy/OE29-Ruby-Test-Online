@@ -16,6 +16,6 @@ document.addEventListener('turbolinks:load', () => {
 import '../stylesheets/application';
 require('admin-lte');
 import '@fortawesome/fontawesome-free/js/all';
-require('packs/trainer')
+require('packs/trainer');
 //= require turbolinks
-require('@nathanvda/cocoon')
+require('@nathanvda/cocoon');

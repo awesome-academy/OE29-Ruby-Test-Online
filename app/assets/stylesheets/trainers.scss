@@ -4,17 +4,21 @@
 @import 'trainers/color';
 @import 'trainers/questions';
 
-  .nav-sidebar .nav-link p {
-    color: $siba_menu;
-    font-weight: bold;
-  }
+.nav-sidebar .nav-link p {
+  color: $siba_menu;
+  font-weight: bold;
+}
 
-  .user-panel .info {
-    color: $name_user;
-    font-weight: bold;
-  }
+.user-panel .info {
+  color: $name_user;
+  font-weight: bold;
+}
 
-  .image-logo {
-    height: 100px;
-    width: 100px
-  }
+.image-logo {
+  height: 100px;
+  width: 100px
+}
+
+.pagination span {
+  padding: 5px;
+}

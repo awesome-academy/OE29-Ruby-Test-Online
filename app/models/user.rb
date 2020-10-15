@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :topics, dependent: :destroy
   has_many :exams, dependent: :destroy
 
+  accepts_nested_attributes_for :questions
+
   validates :name, presence: true,
     length: {maximum: Settings.user.validate.name_max}
   validates :email, presence: true,

@@ -1,0 +1,32 @@
+<tr>
+  <th scope="row"><%= index_of_page(@questions) + question_counter %></th>
+  <td class="review">
+    <div class="content hide-content" >
+      <h5><%= question.question %></h5>
+      <% question.answers.each do |answer| %>
+        <p>
+          <%= answer.content %>
+          <% if answer.check == 1 %>
+            <i class="fas fa-check"></i>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
+    <div class="show-more">
+      <%= button_tag t(".show"),value: 0, type: "button"%>
+    </div>
+  </td>
+  <td><%= question.topic_name %></td>
+  <td><%= question.role %></td>
+  <td><%= question.user_name %></td>
+  <td>
+    <%= link_to edit_trainers_question_path question do %>
+      <i class="fas fa-pen"></i>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to "#" do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+  </td>
+</tr>
