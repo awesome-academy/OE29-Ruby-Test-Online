@@ -1,0 +1,94 @@
+<% provide :title, t(".title") %>
+<!--      Wizard container        -->
+<div class="wizard-container">
+
+  <div class="card wizard-card" data-color="orange" id="wizardProfile">
+    <%= form_for @question, url: trainers_questions_path,
+    class: "contact-wrapper" do |f| %>
+    <div class="wizard-header text-center">
+      <h3 class="wizard-title"><%= t ".slogan1" %></h3>
+      <p class="category"><%= t ".slogan2" %></p>
+    </div>
+
+    <div class="wizard-navigation">
+      <div class="progress-with-circle">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 21%;"></div>
+      </div>
+      <ul>
+        <li>
+          <a href="#topic" data-toggle="tab">
+            <div class="icon-circle">
+              <i class="fas fa-atom"></i>
+            </div>
+            topic
+          </a>
+        </li>
+        <li>
+          <a href="#account" data-toggle="tab">
+            <div class="icon-circle">
+              <i class="ti-settings"></i>
+            </div>
+            Work
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <!-- start topic -->
+      <div class="tab-pane active" id="topic">
+        <div class="row justify-content-center">
+          <div class="col-sm-5">
+            <div class="form-group">
+              <%= f.label :topic_id, t(".topic") %>
+              <span class="require">*</span>
+              <%= f.select :topic_id, options_for_select(@topics.collect{ |topic| [topic.name, topic.id] }),  {}, class: "form-control"%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="account">
+        <div class="row justify-content-center">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group">
+              <%= f.label :question, t(".question") %>
+              <span class="require" style="display: none;" id="question"><%= t ".error_q" %></span>
+              <%= f.text_field :question, placeholder: t(".enter"), class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :role, t(".role") %>
+              <span class="require">*</span>
+              <%= f.select :role, options_for_select(@role.keys), {}, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :answers, t(".answer") %>
+              <span class="require" id="ckeck_box"></span>
+              <div id="answers">
+                <%= f.fields_for :answers do |answer| %>
+                <%= render "answer_fields", f: answer %>
+                <% end %>
+                <div class="links">
+                  <%= link_to_add_association f, :answers do %>
+                  <i class="fas fa-plus-circle"></i>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wizard-footer">
+      <div class="pull-right">
+        <input type="button" class="btn btn-next btn-fill btn-warning btn-wd" name="next" value="Next" id="next" />
+        <input type="submit" class="btn btn-finish btn-fill btn-warning btn-wd" name="finish" id="add_question" value="Finish" disabled="disabled" />
+      </div>
+
+      <div class="pull-left">
+        <input type="button" class="btn btn-previous btn-default btn-wd" name="previous" value="Previous" />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <% end %>
+  </div>
+</div> <!-- wizard container -->

@@ -8,12 +8,14 @@ require('channels')
 //= require jquery3
 //= require bootstrap-sprockets
 // require('packs/scrip')
-
 import 'bootstrap';
 
-document.addEventListener("turbolinks:load", () => {
+document.addEventListener('turbolinks:load', () => {
   $('[data-toggle="tooltip"]').tooltip()
 });
 import '../stylesheets/application';
 require('admin-lte');
-import "@fortawesome/fontawesome-free/js/all";
+import '@fortawesome/fontawesome-free/js/all';
+require('packs/trainer')
+//= require turbolinks
+require('@nathanvda/cocoon')

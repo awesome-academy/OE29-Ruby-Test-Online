@@ -1,28 +1,32 @@
-
-
-  <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
-      <div class="wrapper">
-        <%= render "layouts/base/header" %>
-        <%= render "layouts/base/sidebar" %>
-
-        <div class="content-wrapper">
-          <div class="content-header">
-            <div class="container-fluid">
-              <div class="row mb-2">
-                <div class="col-sm-6">
-                  <h1 class="m-0 text-dark">Starter Page</h1>
-                </div>
-              </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-          </div>
-
-          <div class="content container-fluid">
-            <div class="container-fluid">
-              <%= yield %>
+<body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <div class="switchlan">
+      <%= link_to t(".en"), locale: :en %> |
+      <%= link_to t(".vi"), locale: :vi %>
+    </div>
+    <%= render "layouts/base/header" %>
+    <%= render "layouts/base/sidebar" %>
+    <div class="content-wrapper">
+      <div class="content-header">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark"><%= yield(:title) %></h1>
             </div>
-          </div>
+          </div><!-- /.row -->
+      </div>
+      <div class="content container-fluid">
+        <div class="container-fluid">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+          <%= yield %>
         </div>
-
-        <%= render "layouts/base/footer" %>
-      <div>
-  </body>
+      </div>
+    </div>
+    <%= render "layouts/base/footer" %>
+  <div>
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
+    </script>
+</body>

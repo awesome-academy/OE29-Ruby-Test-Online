@@ -13,6 +13,9 @@ users:
      size_image: 50
 paging:
   size: 20
+answer:
+  validate:
+    content: 300
 images:
   trainee:
     header:

@@ -1,0 +1,11 @@
+<div class="nested-fields">
+  <div class="check_a">
+  <%= f.check_box :check, {class: "check"}, 1, 0 %>
+  </div>
+  <%= f.text_field :content, placeholder: t(".enter_an"), class: "form-control content" %>
+  <div class="svg-minus">
+    <%= link_to_remove_association f do %>
+      <i class="fas fa-minus-circle require"></i>
+    <% end %>
+  </div>
+</div>
