@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     resources :users
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)
-    namespace :trainer do
-      resources :question
+    namespace :trainers do
+      resources :questions
     end
   end
 end

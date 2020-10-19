@@ -19,6 +19,10 @@ vi:
     user_delete: "Xóa người dùng"
     destroy_fail: "Xóa không thành công"
     please_login: "Đăng nhập!"
+
+    question:
+      create_suss: "Tạo câu hỏi thành công!"
+      create_faild: "Tạo câu hỏi không thành công!"
   title: "Test_Online"
   layouts:
     application:
@@ -33,9 +37,23 @@ vi:
       exam: "Bài test"
       account: "Tài khoản"
       logout: "Đăng Xuất"
+          # trainer
+    base:
+      sidebar:
+        trainer: "Trainer"
+        question: "Câu hỏi"
+        statistical: "Thống kê"
+        create_q: "Tạo câu hỏi"
+        show_q: "Danh sách"
+        trainee: "Trainee"
+        create_user: "Thêm trainee"
+        show_user: "Danh sách"
+      footer:
+        slogan: "Make Awesome things that matter"
   static_pages:
     home:
       title: "Trang chủ"
+      title1: "Github"
     help:
       title: "Trợ giúp"
     about:
@@ -94,3 +112,26 @@ vi:
         name: "Name"
         password: "Password"
         password_confirmation: "Confirmation"
+  trainers:
+    questions:
+      new:
+        title: "Tạo câu hỏi"
+        question: "Câu hỏi"
+        enter: "Nhập câu hỏi..."
+        create: "Tạo"
+        topic: "Topic"
+        role: "Loại câu hỏi"
+        answer: "Câu trả lời"
+        slogan1: "Tạo câu hỏi của bạn"
+        slogan2: "Hãy hỏi theo cách của bạn"
+        error_q: "Câu hỏi không được để trống!"
+      answer_fields:
+        enter_an: "Nhập câu trả lời..."
+  javascript:
+    trainer:
+      question:
+        error_notnull: "Hãy chọn đáp án đúng!"
+        error_notfull: "Không tích toàn bộ đán án!"
+        error_one: "Chỉ chọn 1 đán án đúng!"
+        error_typequestion: "Chọn loại câu hỏi!"
+        error_answers: "Nhập đầy đủ câu trả lời!"

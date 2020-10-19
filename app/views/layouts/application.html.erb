@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_pack_tag "application" %>
+
+    <%= javascript_include_tag "i18n" %>
+    <%= javascript_include_tag "translations", skip_pipeline: true %>
   </head>
 
     <body>
@@ -21,9 +24,13 @@
             <% end %>
             <%= yield %>
             <%= render "layouts/footer" %>
-            <%= debug(params) if Rails.env.development? %>
           </div>
+              <script type="text/javascript">
+              I18n.defaultLocale = "<%= I18n.default_locale %>";
+              I18n.locale = "<%= I18n.locale %>";
+            </script>
         <% elsif current_user.trainer? %>
+
           <%= render "layouts/trainers" %>
         <% end %>
       <% else %>

@@ -19,6 +19,10 @@ en:
     user_delete: "User deleted"
     destroy_fail: "Delete fail"
     please_login: "Please log in "
+
+    question:
+      create_suss: "Create question succses!"
+      create_faild: "Create question faild!"
   title: "Test_Online"
   layouts:
     application:
@@ -113,3 +117,26 @@ en:
         name: "Name"
         password: "Password"
         password_confirmation: "Confirmation"
+  trainers:
+    questions:
+      new:
+        title: "Create question"
+        question: "Question"
+        enter: "Enter a question..."
+        create: "Create"
+        topic: "Topic"
+        role: "Type question"
+        answer: "Answer"
+        slogan1: "Create your question"
+        slogan2: "ask your way"
+        error_q: "The question cannot be left blank!"
+      answer_fields:
+        enter_an: "Enter a answer..."
+  javascript:
+    trainer:
+      question:
+        error_notnull: "Not null!"
+        error_notfull: "Do not tick all answers!"
+        error_one: "Only 1 correct answer!"
+        error_typequestion: "Choose the question type!"
+        error_answers: "Enter full answer!"
