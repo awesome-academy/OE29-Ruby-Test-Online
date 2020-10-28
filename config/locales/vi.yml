@@ -24,6 +24,13 @@ vi:
       create_suss: "Tạo câu hỏi thành công!"
       create_faild: "Tạo câu hỏi không thành công!"
   title: "Test_Online"
+  views:
+    pagination:
+        first: "« Lên đầu"
+        last: "Xuống cuối »"
+        previous: "‹ Trước"
+        next: "Sau ›"
+        truncate: "…"
   layouts:
     application:
       title: "Test_Online"
@@ -127,6 +134,14 @@ vi:
         error_q: "Câu hỏi không được để trống!"
       answer_fields:
         enter_an: "Nhập câu trả lời..."
+      index:
+        title: "Danh sách câu hỏi"
+        quesTion: "Câu hỏi"
+        topic: "Chủ đề"
+        type: "Loại câu hỏi"
+        user_create: "Người tạo"
+        edit: "Sửa"
+        delete: "Xóa"
   javascript:
     trainer:
       question:
@@ -135,3 +150,5 @@ vi:
         error_one: "Chỉ chọn 1 đán án đúng!"
         error_typequestion: "Chọn loại câu hỏi!"
         error_answers: "Nhập đầy đủ câu trả lời!"
+        show: "Hiện"
+        hide: "Ẩn"

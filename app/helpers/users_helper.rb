@@ -4,4 +4,8 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
+
+  def index_of_page object
+    (object.current_page - 1) * object.limit_value + 1
+  end
 end

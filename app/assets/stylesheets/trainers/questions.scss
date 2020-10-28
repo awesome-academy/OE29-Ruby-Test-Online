@@ -1,12 +1,46 @@
 @import 'color';
-
 .require {
-  color: $require;
+    color: $require;
 }
 
 .svg-plus {
-  float: right;
+    float: right;
 }
+
 .svg-minus {
-  float: right;
+    float: right;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid ;
+  }
+}
+
+.hide-content {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+}
+
+.show-content {
+    line-height: 1em;
+    height: auto;
+}
+
+.show-content {
+    height: auto;
+}
+
+.show-more button {
+  color: $showmore;
+  padding: 5px;
+  background-color: $backshow;
+  border: 0;
+  border-radius: 10px;
 }

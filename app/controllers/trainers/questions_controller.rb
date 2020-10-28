@@ -1,7 +1,10 @@
 class Trainers::QuestionsController < ApplicationController
   before_action :logged_in_user
 
-  def index; end
+  def index
+    @questions = Question.includes(:topic, :user, :answers)
+                         .page(params[:page]).per Settings.paging.size
+  end
 
   def new
     @question = current_user.questions.build

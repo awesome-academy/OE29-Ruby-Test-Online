@@ -24,6 +24,13 @@ en:
       create_suss: "Create question succses!"
       create_faild: "Create question faild!"
   title: "Test_Online"
+  views:
+  pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"
   layouts:
     application:
       title: "Test_Online"
@@ -132,6 +139,15 @@ en:
         error_q: "The question cannot be left blank!"
       answer_fields:
         enter_an: "Enter a answer..."
+      index:
+        title: "List Question"
+        quesTion: "QuesTion"
+        topic: "Topic"
+        type: "Type"
+        user_create: "User create"
+        edit: "Edit"
+        delete: "Delete"
+        show: "Show"
   javascript:
     trainer:
       question:
@@ -140,3 +156,5 @@ en:
         error_one: "Only 1 correct answer!"
         error_typequestion: "Choose the question type!"
         error_answers: "Enter full answer!"
+        show: "Show"
+        hide: "Hide"

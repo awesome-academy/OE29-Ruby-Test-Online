@@ -1,0 +1,22 @@
+<% provide :title, t(".title") %>
+<div class="wizard-container">
+  <div class="card wizard-card" data-color="orange">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"><%= t ".quesTion" %></th>
+            <th scope="col"><%= t ".topic" %></th>
+            <th scope="col"><%= t ".type" %></th>
+            <th scope="col"><%= t ".user_create" %></th>
+            <th scope="col"><%= t ".edit" %></th>
+            <th scope="col"><%= t ".delete" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @questions %>
+        </tbody>
+    </table>
+    <%= paginate @questions %>
+  </div>
+</div>
